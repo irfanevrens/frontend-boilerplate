@@ -54,6 +54,8 @@ $ npm run clean
 #### About task runner preferences
 Because of 3 main concerns, npm scripts are preferred over `gulp` or `grunt` :
 
+Check out [this blog post](https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8) for the reasons
+
 * Dependence on plugin authors
 * Frustrating debugging
   * Is the base tool broken?

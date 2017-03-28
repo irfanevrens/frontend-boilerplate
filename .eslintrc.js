@@ -10,22 +10,10 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
+        "indent": ["error",2],
+        "linebreak-style": ["error","windows"],
+        "quotes": ["error","single"],
+        "semi": ["error","always"],
         "no-var":["error"],
         "no-new-object":["error"],
         "object-shorthand":["error"],
@@ -44,8 +32,10 @@ module.exports = {
         "spaced-comment":["error"],
         "space-in-parens":["error"],
         "array-bracket-spacing":["error"],
-        "max-len":["error",{"code":60,"ignoreComments":true}],
-        "id-length":["error",{"min":2,"max":14}],
-        "no-underscore-dangle":["error"]
+        "max-len":["error",{"code":100,"ignoreComments":true}],
+        "id-length":["warn",{"min":2,"max":14}],
+        "no-underscore-dangle":["error"],
+        "no-unused-vars":["warn"],
+        "no-console":["off"]
     }
 };

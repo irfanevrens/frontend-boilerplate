@@ -1,15 +1,12 @@
-/**
-* My method description.  Like other pieces of your comment blocks,
-* this can span multiple lines.
-* @class Main
-* @method methodName
-* @param {String} foo Argument 1
-* @param {Object} config A config object
-* @param {String} config.name The name on the config object
-* @param {Function} config.callback A callback function on the config objectA callback function on the config objectA callback function on the config objectA callback function on the config objectA callback function on the config object
-* @param {Boolean} [extra=false] Do extra, optional work
-* @return {Boolean} Returns true on success
-*/
+import angular from 'angular';
 
-// naber
-console.log('Helloo');
+import {ExampleService} from './services/service.example.js';
+import {ExampleController as denemeController} from './controllers/controller.example.js';
+import './styles/main.scss';
+
+let app = angular.module('myApp',[]);
+app.controller('deneme',denemeController);
+
+let result = ExampleService(app);
+
+console.log(result);

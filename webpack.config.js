@@ -8,7 +8,7 @@ var extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: "./src/index.js",
-    target:'web',
+    target: 'web',
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "build.js",
@@ -19,17 +19,6 @@ module.exports = {
 
     module: {
         rules: [{
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "eslint-loader",
-                options: {
-                    outputReport: {
-                        filePath: 'lint-errors.log',
-                        formatter: require('eslint/lib/formatters/checkstyle')
-                    }
-                }
-            }, {
                 test: /\.scss$/,
                 use: extractSass.extract({
                     use: [{
@@ -63,6 +52,18 @@ module.exports = {
                         presets: ['es2015']
                     }
                 }
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                options: {
+                    outputReport: {
+                        filePath: 'lint-errors.log',
+                        formatter: require('eslint/lib/formatters/checkstyle')
+                    }
+                }
             }
         ]
     },
@@ -73,14 +74,12 @@ module.exports = {
         ],
         extensions: [".js", ".json", ".jsx", ".css"],
     },
-    devtool: "source-map",
+    devtool: "eval-source-map",
     context: __dirname,
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
-            sourceMap: "source-map",
-            comments: false,
-            sourceMap: true
-        }),
+            comments: false
+          }),
         extractSass
     ]
 }
