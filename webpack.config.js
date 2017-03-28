@@ -74,10 +74,11 @@ module.exports = {
         ],
         extensions: [".js", ".json", ".jsx", ".css"],
     },
-    devtool: "eval-source-map",
+    devtool: "source-map",
     context: __dirname,
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
+            sourceMap:true,
             comments: false
           }),
         extractSass
