@@ -1,6 +1,6 @@
 {
   "name": "fixit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fixit Project Front End code for ABN Amro",
   "main": "index.html",
   "scripts": {
@@ -11,7 +11,7 @@
     "build": "webpack",
     "postbuild": "yuidoc src/ -o dist/doc",
     "deploy:dev": "",
-    "deploy:production":""
+    "deploy:production": ""
   },
   "author": "Virtual Affairs BV",
   "license": "ISC",
