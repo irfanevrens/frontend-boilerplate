@@ -34,18 +34,33 @@ To minimize the 3rd party dependencies builds are assigned to webpack and tasks 
 as `npm scripts`
 
 ```sh
+# Generates Documentation
+$ npm run doc
+
+# Builds for the production / test environment and creates the documentation
+$ npm run build
+
 # Runs a development server with webpack-dev-server
 $ npm run dev
 
 # Lints your code
 $ npm run lint
 
-# Generates Documentation
-$ npm run doc
+# Cleans `dist folder`
+$ npm run clean
 
-# Builds for the production / test environment
-$ npm run build
 ```
+
+#### About task runner preferences
+Because of 3 main concerns, npm scripts are preferred over `gulp` or `grunt` :
+
+* Dependence on plugin authors
+* Frustrating debugging
+  * Is the base tool broken?
+  * Is the Grunt/Gulp plugin broken?
+  * Is my configuration broken?
+  * Am I using incompatible versions?
+* Disjointed documentation
 
 **Please do not forget to update Readme as you add any scripts to package.json**
 

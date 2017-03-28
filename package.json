@@ -1,15 +1,16 @@
 {
   "name": "fixit",
-  "version": "0.0.2",
+  "version": "0.0.9",
   "description": "Fixit Project Front End code for ABN Amro",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server",
-    "lint": "eslint ./src/**/*.js",
     "doc": "yuidoc src/ -o dist/doc",
     "build": "webpack",
     "postbuild": "yuidoc src/ -o dist/doc",
+    "dev": "webpack-dev-server",
+    "lint": "eslint ./src/**/*.js",
+    "clean":"rimraf dist",
     "deploy:dev": "",
     "deploy:production": ""
   },
@@ -25,6 +26,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "node-sass": "^4.5.1",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2",
