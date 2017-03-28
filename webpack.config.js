@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var WebpackShellPlugin = require('webpack-shell-plugin');
 
 var extractSass = new ExtractTextPlugin({
     filename: "[name].css"
@@ -81,10 +80,6 @@ module.exports = {
             sourceMap: "source-map",
             comments: false,
             sourceMap: true
-        }),
-        new WebpackShellPlugin({
-            onBuildStart: ['npm run webpack:before'],
-            onBuildEnd: ['npm run webpack:after']
         }),
         extractSass
     ]

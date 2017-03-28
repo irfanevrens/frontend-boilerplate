@@ -9,8 +9,9 @@
     "lint": "eslint ./src/**/*.js",
     "doc": "yuidoc src/ -o dist/doc",
     "build": "webpack",
-    "webpack:before": "echo Compiling",
-    "webpack:after": "echo Compiled"
+    "postbuild": "yuidoc src/ -o dist/doc",
+    "deploy:dev": "",
+    "deploy:production":""
   },
   "author": "Virtual Affairs BV",
   "license": "ISC",
@@ -27,7 +28,6 @@
     "sass-loader": "^6.0.3",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2",
-    "webpack-shell-plugin": "^0.5.0",
     "yuidocjs": "^0.10.2"
   }
 }

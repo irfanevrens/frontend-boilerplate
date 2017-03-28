@@ -13,7 +13,7 @@ Here will be some description to the project information and goals.
 * UglifyJsPlugin which is built in webpack for minifying the javascript bundle
 * [ESLint](http://eslint.org) For identifying and reporting on patterns, which is very similar to `JSLint` and `JSHint`
 * [ESLint Loader for Webpack](https://github.com/MoOx/eslint-loader) for linting before building
-* [Webpack-shell-plugin](https://www.npmjs.com/package/webpack-shell-plugin) for running tasks before/after webpack-builds
+
 
 ```js
 new webpack.optimize.UglifyJsPlugin({
@@ -27,12 +27,6 @@ new webpack.optimize.UglifyJsPlugin({
 
 Webpack 2.x comes with built-in support for ES6 modules but doesn't
 transpile to ES2015 (like the let,const,class tokens) .
-
-
-###### Note on `webpack-shell-plugin` :
-
-By default webpack-shell-plugin will run `webpack:before` and `webpack:after` scripts in `package.json`
-if you don't change the config in `webpack.config.js` accordingly
 
 ## Development
 
