@@ -53,3 +53,10 @@ $ npm run build
 ```
 
 **Please do not forget to update Readme as you add any scripts to package.json**
+
+## Style Guides [Check here](Styleguides.md)
+
+The style guides are highlights from AirBnb Style guides and more detailed, long and boring version can be found at [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+
+Also check [ES Lint Rules](http://eslint.org/docs/rules/) for rules.
+All the coding standars are defined in `./.eslintrc.js`

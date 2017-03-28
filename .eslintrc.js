@@ -11,7 +11,7 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
-            "tab"
+            2
         ],
         "linebreak-style": [
             "error",
@@ -24,6 +24,27 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-var":["error"],
+        "no-new-object":["error"],
+        "object-shorthand":["error"],
+        "no-array-constructor":["error"],
+        "space-before-function-paren": ["error", "always"],
+        "no-param-reassign":["error"],
+        "prefer-arrow-callback":["error"],
+        "no-useless-constructor":["error"],
+        "no-dupe-class-members":["error"],
+        "no-duplicate-imports":["error"],
+        "no-plusplus":["error"],
+        "eqeqeq":["error"],
+        "no-nested-ternary":["error"],
+        "no-unneeded-ternary":["error"],
+        "brace-style":["error"],
+        "spaced-comment":["error"],
+        "space-in-parens":["error"],
+        "array-bracket-spacing":["error"],
+        "max-len":["error",{"code":60,"ignoreComments":true}],
+        "id-length":["error",{"min":2,"max":14}],
+        "no-underscore-dangle":["error"]
     }
 };
