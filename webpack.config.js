@@ -9,6 +9,7 @@ var extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: "./src/index.js",
+    target:'web',
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "build.js",
@@ -19,6 +20,17 @@ module.exports = {
 
     module: {
         rules: [{
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                options: {
+                    outputReport: {
+                        filePath: 'lint-errors.log',
+                        formatter: require('eslint/lib/formatters/checkstyle')
+                    }
+                }
+            }, {
                 test: /\.scss$/,
                 use: extractSass.extract({
                     use: [{
@@ -44,15 +56,15 @@ module.exports = {
                 loader: "file-loader"
             },
             {
-               test: /\.js$/,
-               exclude: /(node_modules|bower_components)/,
-               use: {
-                 loader: 'babel-loader',
-                 options: {
-                   presets: ['es2015']
-                 }
-               }
-             }
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['es2015']
+                    }
+                }
+            }
         ]
     },
     resolve: {
@@ -67,10 +79,13 @@ module.exports = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: "source-map",
-            comments:false,
-            sourceMap:true
+            comments: false,
+            sourceMap: true
         }),
-		  new WebpackShellPlugin({onBuildStart:['npm run webpack:before'], onBuildEnd:['npm run webpack:after']}),
+        new WebpackShellPlugin({
+            onBuildStart: ['npm run webpack:before'],
+            onBuildEnd: ['npm run webpack:after']
+        }),
         extractSass
     ]
 }

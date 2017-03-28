@@ -12,6 +12,7 @@ Here will be some description to the project information and goals.
 * [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) Because we want a separate CSS bundle
 * UglifyJsPlugin which is built in webpack for minifying the javascript bundle
 * [ESLint](http://eslint.org) For identifying and reporting on patterns, which is very similar to `JSLint` and `JSHint`
+* [ESLint Loader for Webpack](https://github.com/MoOx/eslint-loader) for linting before building
 * [Webpack-shell-plugin](https://www.npmjs.com/package/webpack-shell-plugin) for running tasks before/after webpack-builds
 
 ```js
